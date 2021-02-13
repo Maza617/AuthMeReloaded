@@ -139,19 +139,17 @@ settings:
         allowCommands: 
         - /login
         - /register
-        - /l
-        - /reg
         - /email
         - /captcha
         - /2fa
         - /totp
         # Max number of allowed registrations per IP
         # The value 0 means an unlimited number of registrations!
-        maxRegPerIp: 1
+        maxRegPerIp: 3
         # Minimum allowed username length
         minNicknameLength: 3
         # Maximum allowed username length
-        maxNicknameLength: 16
+        maxNicknameLength: 20
         # When this setting is enabled, online players can't be kicked out
         # due to "Logged in from another Location"
         # This setting will prevent potential security exploits.
@@ -223,7 +221,7 @@ settings:
         allowedPasswordCharacters: '[!-~]*'
     GameMode:
         # Force survival gamemode when player joins?
-        ForceSurvivalMode: false
+        ForceSurvivalMode: true
     unrestrictions:
         # Below you can list all account names that AuthMe will ignore
         # for registration or login. Configure it at your own risk!!
@@ -395,7 +393,7 @@ Hooks:
     useEssentialsMotd: false
 Protection:
     # Enable some servers protection (country based login, antibot)
-    enableProtection: false
+    enableProtection: true
     # Apply the protection also to registered usernames
     enableProtectionRegistered: true
     geoIpDatabase:
@@ -462,7 +460,7 @@ Security:
         # Enable captcha when a player uses wrong password too many times
         useCaptcha: false
         # Max allowed tries before a captcha is required
-        maxLoginTry: 5
+        maxLoginTry: 1
         # Captcha length
         captchaLength: 5
         # Minutes after which login attempts count is reset for a player
